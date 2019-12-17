@@ -28,8 +28,32 @@ public class Block {
         hasBlock = false;
     }
 
+    public void changeCol(int i){
+        col+=i;
+    }
+
+    public void fall(int x){
+        row+=x;
+    }
+
     public Rectangle getR(){
         return r;
+    }
+
+    public void setRow(int x){
+        row = x;
+    }
+
+    public void setCol(int y){
+        col = y;
+    }
+
+    public int getRow(){
+        return row;
+    }
+
+    public int getCol(){
+        return col;
     }
 
     public void changeColor(Color color){
