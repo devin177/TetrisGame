@@ -30,9 +30,17 @@ public class Game extends Application {
 
         //Creating and setting up a group and the layouts
         BorderPane bp = new BorderPane();
+
+        //Gridpane where the game is built
         GridPane gridPane = new GridPane();
+
+        //Vertical box that has the score
         VBox vb = new VBox();
+
+        //HBox that has my witty comment or patch number
         HBox hb = new HBox();
+
+        //Vertical box on the right that will contain metadata about the piece and what you have saved
         VBox right = new VBox();
 
         //Declare and initialize an array of rectangles that will display the board
@@ -53,12 +61,15 @@ public class Game extends Application {
 
         Label label = new Label();
         vb.setMinWidth(100);
-        vb.getChildren().add(label);
+        vb.getChildren().addAll(label);
 
-        Label label2 = new Label("TETRIS BUT ONLY SQUARES AND LINES AND YOU CAN'T ROTATE AND THERE'S NO INDICATOR");
+        Label label2 = new Label("Patch Day 3: Squares + Lines + Indicator + Rotation");
         hb.getChildren().add(label2);
+
+        //Game pieces are actually just one changing tetromino
         Tetromino tetromino = new Tetromino(0,4,dropRate,grid);
 
+        //Values that show if you've filled a line
         boolean[] lines = new boolean[rows];
 
         //Controller handling for moving or rotating the piece
@@ -78,17 +89,24 @@ public class Game extends Application {
                         tetromino.changeRow(1);
                     }
                         break;
+                    case X: tetromino.rotate();
+                        break;
+                    case SPACE: tetromino.hardDrop();
+                        break;
                     default: break;
                 }
             }
         });
 
+        //Add the scene to the window and then show it
         window.setScene(scene);
         window.show();
 
-
+        //Creating label to put on the right vbox
         Label instructions = new Label("Use arrow keys to move");
+        Button restart = new Button("Restart?");
 
+        //Add a node to the vbox layout
         right.getChildren().add(instructions);
 
 
@@ -115,20 +133,26 @@ public class Game extends Application {
                     secs +=1;                                   //Also, if the tetromino has hit the bottom, or there is a piece under it, stop dropping and move it back
                     start = currentNanoTime;                    //and toggle the last position it was at to have blocked on
 
-                    if(tetromino.canDrop()){
+                    if(tetromino.canDrop()){                    //Checks if the tetromino is able to drop down one space, if yes, drop the piece
                         tetromino.fall();
                     }else{
-                        tetromino.solidify();                   //Cements the block onto the board
+                        tetromino.solidify();                   //Otherwise, cements the block onto the board
+                        tetromino.changeShape();                       //Selects the new piece
+
                         score+= 100 * checkTetris(grid, lines);        //Checks if you can clear any lines
-                        tetromino.changeShape();
-                        if(!tetromino.getFree()) {
+                        if(!tetromino.getFree()) {                     //Checks if the game is over
                             System.out.println("Game Over");
+                            window.close();
                         }
                         tetromino.resetRow();                    //Brings the tetromino back to the top
                     }
                 }
-                tetromino.draw();
-                label.setText("Score: " + score);
+
+                score+= 100 * checkTetris(grid, lines);        //Checks if you can clear any lines
+                tetromino.updatePhantom();                      //Update where the phantom tetromino will be
+                tetromino.drawPhantom();                        //Display the phantom tetromino
+                tetromino.draw();                               //Display the actual tetromino
+                label.setText("Score: " + score);               //Update the score card
             }
         };
         timer.start();
@@ -139,7 +163,7 @@ public class Game extends Application {
         int firstCleared = -1;
         boolean linesCleared = false;
         int amountCleared = 0;
-        for(int i = rows-1; i >= 0; --i){
+        for(int i = 0; i <  rows; ++i){
             int count = 0;
             for(int j = 0; j < cols; ++j){
                 if(grid[i][j].isBlocked()){
@@ -163,6 +187,7 @@ public class Game extends Application {
         if(linesCleared){
             for(int i = 0; i < amountCleared; ++i){
                 moveRemaining(grid, firstCleared);
+                System.out.println(firstCleared);
             }
         }
         return(amountCleared);

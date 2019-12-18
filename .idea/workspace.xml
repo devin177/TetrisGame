@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e7fb093-2a26-4fd2-b8de-19be2b0702d4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TetrisGame/Block.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TetrisGame/Block.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TetrisGame/Game$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TetrisGame/Game$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TetrisGame/Game$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TetrisGame/Game$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TetrisGame/Game$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TetrisGame/Game$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TetrisGame/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TetrisGame/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TetrisGame/Tetromino.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TetrisGame/Tetromino.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Block.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tetromino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tetromino.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +33,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="public" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../JavaFxApp" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -88,7 +81,8 @@
       <workItem from="1574119263414" duration="7272000" />
       <workItem from="1574895443956" duration="2365000" />
       <workItem from="1576441008323" duration="19155000" />
-      <workItem from="1576530051827" duration="16320000" />
+      <workItem from="1576530051827" duration="16817000" />
+      <workItem from="1576641630263" duration="16058000" />
     </task>
     <servers />
   </component>
@@ -100,26 +94,30 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1576568204998" />
-    <state width="1807" height="144" key="GridCell.Tab.0.bottom" timestamp="1576570291952">
+    <state width="1807" height="144" key="GridCell.Tab.0.bottom" timestamp="1576659974880">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="144" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1576570291952" />
-    <state width="1807" height="144" key="GridCell.Tab.0.center" timestamp="1576570291952">
+    <state width="1807" height="144" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1576659974880" />
+    <state width="1807" height="144" key="GridCell.Tab.0.center" timestamp="1576659974880">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="144" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1576570291952" />
-    <state width="1807" height="144" key="GridCell.Tab.0.left" timestamp="1576570291951">
+    <state width="1807" height="144" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1576659974880" />
+    <state width="1807" height="144" key="GridCell.Tab.0.left" timestamp="1576659974880">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="144" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1576570291951" />
-    <state width="1807" height="144" key="GridCell.Tab.0.right" timestamp="1576570291952">
+    <state width="1807" height="144" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1576659974880" />
+    <state width="1807" height="144" key="GridCell.Tab.0.right" timestamp="1576659974880">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="144" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1576570291952" />
+    <state width="1807" height="144" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1576659974880" />
     <state x="647" y="170" width="683" height="764" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1576456424012">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="647" y="170" width="683" height="764" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1576456424012" />
+    <state x="726" y="318" width="524" height="468" key="extract.method.dialog" timestamp="1576646527990">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="726" y="318" width="524" height="468" key="extract.method.dialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576646527990" />
     <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1576568680957">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
